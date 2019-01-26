@@ -210,7 +210,8 @@ public class GravGun : MonoBehaviour
             Vector3 toDestination = centerDestination - HoldingObject.transform.position;
 
             // Calculate force
-            Vector3 force = toDestination / Time.fixedDeltaTime;
+            //Vector3 force = toDestination / Time.fixedDeltaTime;
+            Vector3 force = Vector3.Slerp(toDestination, holdPoint, Time.fixedDeltaTime);
 
        
 
