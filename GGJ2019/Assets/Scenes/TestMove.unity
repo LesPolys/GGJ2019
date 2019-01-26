@@ -331,6 +331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  minPitchRange: 1
+  maxPitchRange: 1
 --- !u!1 &3598916
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  minPitchRange: 1
+  maxPitchRange: 1
 --- !u!54 &263575173
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1420,6 +1424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  minPitchRange: 1
+  maxPitchRange: 1
 --- !u!1 &803271108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2081,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  minPitchRange: 1
+  maxPitchRange: 1
 --- !u!1001 &1159427168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2363,6 +2371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  minPitchRange: 1
+  maxPitchRange: 1
 --- !u!1 &1170200252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,10 +2570,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootForce: 1000
-  pushPullForce: 0.1
+  ScrollWheelSpeed: 3.41
   minDistance: 2
   maxDistance: 10
   chargeSlider: {fileID: 876876927}
+  SlerpSpeed: 11.76
   initialHoldingPoint: {fileID: 1693261505}
   maxGrabDistance: 15
 --- !u!1 &1192323680
@@ -3124,6 +3135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  minPitchRange: 1
+  maxPitchRange: 1
 --- !u!1 &1884039084
 GameObject:
   m_ObjectHideFlags: 0

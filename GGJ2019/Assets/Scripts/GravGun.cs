@@ -9,12 +9,14 @@ public class GravGun : MonoBehaviour
 {
 
     public float shootForce;
-    public float pushPullForce;
+    public float ScrollWheelSpeed;
     public float minDistance;
     public float maxDistance;
 
     private float chargeValue;
     public Slider chargeSlider;
+
+    public float SlerpSpeed; 
 
     public Transform initialHoldingPoint;
 
@@ -153,7 +155,7 @@ public class GravGun : MonoBehaviour
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             {
-                float newGrabDistance = currentGrabDistance + pushPullForce;
+                float newGrabDistance = currentGrabDistance + ScrollWheelSpeed;
                 if (newGrabDistance > maxDistance)
                 {
                     newGrabDistance = currentGrabDistance;
@@ -163,7 +165,7 @@ public class GravGun : MonoBehaviour
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             {
 
-                float newGrabDistance = currentGrabDistance - pushPullForce;
+                float newGrabDistance = currentGrabDistance - ScrollWheelSpeed;
                 if (newGrabDistance < minDistance)
                 {
                     newGrabDistance = currentGrabDistance;
@@ -211,7 +213,7 @@ public class GravGun : MonoBehaviour
 
             // Calculate force
             //Vector3 force = toDestination / Time.fixedDeltaTime;
-            Vector3 force = Vector3.Slerp(toDestination, holdPoint, Time.fixedDeltaTime);
+            Vector3 force = Vector3.Slerp(toDestination, holdPoint, Time.fixedDeltaTime * SlerpSpeed);
 
        
 
