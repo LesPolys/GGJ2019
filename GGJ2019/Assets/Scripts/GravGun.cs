@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 
 public class GravGun : MonoBehaviour
@@ -41,10 +42,17 @@ public class GravGun : MonoBehaviour
     /// <summary>The maximum distance at which a new object can be picked up</summary>
     public float maxGrabDistance = 30;
 
+
     /// <returns>Ray from center of the main camera's viewport forward</returns>
     private Ray CenterRay()
     {
         return Camera.main.ViewportPointToRay(Vector3.one * 0.5f);
+    }
+
+
+    void Awake()
+    {
+       
     }
 
     void Update()
@@ -107,6 +115,65 @@ public class GravGun : MonoBehaviour
                 IsRotating = false;
             }
         }
+
+        if (HoldingObject)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * chargeValue, ForceMode.Force);
+                HoldingObject.interpolation = initialInterpolationSetting;
+
+
+                CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
+
+                HoldingObject = null;
+                chargeValue = 0.0f;
+                chargeSlider.value = chargeValue;
+
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+
+                if (chargeValue < 1)
+                {
+                    chargeValue += 0.05f;
+                }
+                else
+                {
+                    chargeValue = 1;
+                }
+                chargeSlider.value = chargeValue;
+
+
+            }
+
+
+
+
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                float newGrabDistance = currentGrabDistance + pushPullForce;
+                if (newGrabDistance > maxDistance)
+                {
+                    newGrabDistance = currentGrabDistance;
+                }
+                currentGrabDistance = newGrabDistance;
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+
+                float newGrabDistance = currentGrabDistance - pushPullForce;
+                if (newGrabDistance < minDistance)
+                {
+                    newGrabDistance = currentGrabDistance;
+                }
+                currentGrabDistance = newGrabDistance;
+
+
+            }
+        }
+
     }
 
     private void FixedUpdate()
@@ -151,54 +218,7 @@ public class GravGun : MonoBehaviour
             HoldingObject.velocity = Vector3.zero;
             HoldingObject.AddForce(force, ForceMode.VelocityChange);
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * chargeValue, ForceMode.Force);
-                HoldingObject.interpolation = initialInterpolationSetting;
-
-                HoldingObject = null;
-                chargeValue = 0.0f;
-                chargeSlider.value = chargeValue;
-            }
-
-            if (Input.GetMouseButton(0))
-            {
-          
-                if(chargeValue < 1)
-                {
-                    chargeValue += 0.01f;
-                }else{
-                    chargeValue = 1;
-                }
-                chargeSlider.value = chargeValue;
-           
-                
-            }
-
-         
-
-
-            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-            {
-                float newGrabDistance = currentGrabDistance + pushPullForce;
-                if (newGrabDistance > maxDistance)
-                {
-                    newGrabDistance = currentGrabDistance;
-                }
-                currentGrabDistance = newGrabDistance;
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
-            {
-
-                float newGrabDistance = currentGrabDistance - pushPullForce;
-                if (newGrabDistance < minDistance)
-                {
-                    newGrabDistance = currentGrabDistance;
-                }
-                currentGrabDistance = newGrabDistance;
-
-              
-            }
+            
 
 
         }
