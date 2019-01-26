@@ -101,12 +101,7 @@ public class GravGun : MonoBehaviour
             {
                 IsRotating = false;
             }
-        
-
-
         }
-
-
     }
 
     private void FixedUpdate()
