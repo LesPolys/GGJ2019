@@ -130,15 +130,7 @@ public class GravGun : MonoBehaviour
 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * chargeValue, ForceMode.Force);
-                    HoldingObject.interpolation = initialInterpolationSetting;
-
-
-                    CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
-
-                    HoldingObject = null;
-                    chargeValue = 0.0f;
-                    chargeSlider.value = chargeValue;
+                    ShootGravGun(chargeValue);
 
                 }
 
@@ -164,16 +156,7 @@ public class GravGun : MonoBehaviour
                 // Shoot Instantly
                 if (Input.GetMouseButtonDown(0))
                 {
-                    HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * instaShotChargeValue, ForceMode.Force);
-                    HoldingObject.interpolation = initialInterpolationSetting;
-
-
-                    CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
-
-                    HoldingObject = null;
-                    chargeValue = 0.0f;
-                    chargeSlider.value = chargeValue;
-                    HoldingObject.useGravity = true;
+                    ShootGravGun(instaShotChargeValue);
 
                 }
 
@@ -205,6 +188,26 @@ public class GravGun : MonoBehaviour
         }
 
     }
+
+
+
+    private void ShootGravGun(float shotCharge)
+    {
+
+        HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * shotCharge, ForceMode.Force);
+        HoldingObject.interpolation = initialInterpolationSetting;
+
+
+        CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
+
+        HoldingObject = null;
+        chargeValue = 0.0f;
+        chargeSlider.value = chargeValue;
+        HoldingObject.useGravity = true;
+
+    }
+
+
 
     private void FixedUpdate()
     {
