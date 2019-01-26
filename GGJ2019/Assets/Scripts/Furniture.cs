@@ -12,7 +12,8 @@ public class Furniture : MonoBehaviour
 
     public float maxScoreVale;
     public float scoreCheckCountDown;
-    public const float minDistValue = 10.0f;
+    public const float maxDistValue = 10.0f;
+    public float minDistCutoff = 0.01f;
     private bool isMoving;
     private bool isCountingDown;
 
@@ -50,7 +51,25 @@ public class Furniture : MonoBehaviour
 
     private void RunScoreCheck()
     {
+        float distanceScore;
         float finalDistance = Vector3.Distance(transform.position, finalPosition);
+        if (finalDistance >= maxDistValue)
+        {
+            distanceScore = 0;
+        }
+        else
+        {
+            if (finalDistance < minDistCutoff)
+            {
+                distanceScore = maxScoreVale;
+            }
+            else
+            {
+                distanceScore = maxScoreVale / finalDistance;
+            }
+            
+        }
+      
 
 
    

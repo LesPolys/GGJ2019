@@ -103,6 +103,7 @@ public class GravGun : MonoBehaviour
                     
                     // Set rigidbody's interpolation for proper collision detection when being moved by the player
                     HoldingObject.interpolation = RigidbodyInterpolation.Interpolate;
+                    hit.rigidbody.useGravity = false;
                 }
             }
         }
@@ -172,6 +173,7 @@ public class GravGun : MonoBehaviour
                     HoldingObject = null;
                     chargeValue = 0.0f;
                     chargeSlider.value = chargeValue;
+                    HoldingObject.useGravity = true;
 
                 }
 

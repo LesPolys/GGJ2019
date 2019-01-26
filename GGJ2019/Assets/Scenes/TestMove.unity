@@ -1526,8 +1526,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 806251615}
-  - component: {fileID: 806251616}
   - component: {fileID: 806251617}
+  - component: {fileID: 806251616}
   m_Layer: 0
   m_Name: GravGun
   m_TagString: Untagged
@@ -1576,8 +1576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be5cb4e28550254fa7fa28429615d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobSpeed: 1
-  bobDistance: 1
+  bobSpeed: 0.25
+  bobDistance: 0.001
   Gun: {fileID: 1998443231}
 --- !u!1 &876876925
 GameObject:
@@ -2575,6 +2575,8 @@ MonoBehaviour:
   maxDistance: 10
   chargeSlider: {fileID: 876876927}
   SlerpSpeed: 11.76
+  ChargeBeforeShot: 1
+  instaShotChargeValue: 1
   initialHoldingPoint: {fileID: 1693261505}
   maxGrabDistance: 15
 --- !u!1 &1192323680
