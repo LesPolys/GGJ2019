@@ -95,7 +95,7 @@ public class GravGun : MonoBehaviour
                     // Track rigidbody's initial information
                     HoldingObject = hit.rigidbody;
                     initialInterpolationSetting = HoldingObject.interpolation;
-                    rotationDifferenceEuler = hit.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
+                    //rotationDifferenceEuler = hit.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
                     hitOffsetLocal = hit.transform.InverseTransformVector(hit.point - hit.transform.position);
 
                     //currentGrabDistance = Vector3.Distance(ray.origin, hit.point);
@@ -130,8 +130,16 @@ public class GravGun : MonoBehaviour
 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    ShootGravGun(chargeValue);
-                    
+                    HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * chargeValue, ForceMode.Force);
+                    HoldingObject.interpolation = initialInterpolationSetting;
+
+
+                    CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
+
+                    HoldingObject = null;
+                    chargeValue = 0.0f;
+                    chargeSlider.value = chargeValue;
+
                 }
 
                 if (Input.GetMouseButton(0))
@@ -156,8 +164,17 @@ public class GravGun : MonoBehaviour
                 // Shoot Instantly
                 if (Input.GetMouseButtonDown(0))
                 {
-                    ShootGravGun(instaShotChargeValue);
-                    
+                    HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * instaShotChargeValue, ForceMode.Force);
+                    HoldingObject.interpolation = initialInterpolationSetting;
+
+
+                    CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
+
+                    HoldingObject = null;
+                    chargeValue = 0.0f;
+                    chargeSlider.value = chargeValue;
+                    HoldingObject.useGravity = true;
+
                 }
 
             }
@@ -189,29 +206,6 @@ public class GravGun : MonoBehaviour
 
     }
 
-
-
-    private void ShootGravGun(float shotCharge)
-    {
-
-        HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * shotCharge, ForceMode.Force);
-        HoldingObject.interpolation = initialInterpolationSetting;
-
-
-        CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
-
-
-        HoldingObject.useGravity = true;
-
-        HoldingObject = null;
-        chargeValue = 0.0f;
-        chargeSlider.value = chargeValue;
-        
-
-    }
-
-
-
     private void FixedUpdate()
     {
         if (HoldingObject)
@@ -223,7 +217,7 @@ public class GravGun : MonoBehaviour
             
 
             // Rotate the object to remain consistent with any changes in player's rotation
-            HoldingObject.MoveRotation(Quaternion.Euler(rotationDifferenceEuler + transform.rotation.eulerAngles));
+           // HoldingObject.MoveRotation(Quaternion.Euler(rotationDifferenceEuler + transform.rotation.eulerAngles));
 
             // Get the destination point for the point on the object we grabbed
             Vector3 holdPoint = ray.GetPoint(currentGrabDistance);
@@ -232,13 +226,14 @@ public class GravGun : MonoBehaviour
             // Apply any intentional rotation input made by the player & clear tracked input
             Vector3 currentEuler = HoldingObject.rotation.eulerAngles;
             HoldingObject.transform.RotateAround(holdPoint, transform.right, rotationInput.y);
+
             HoldingObject.transform.RotateAround(holdPoint, transform.up, -rotationInput.x);
         
 
             // Remove all torque, reset rotation input & store the rotation difference for next FixedUpdate call
             HoldingObject.angularVelocity = Vector3.zero;
             rotationInput = Vector2.zero;
-            rotationDifferenceEuler = HoldingObject.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
+            //rotationDifferenceEuler = HoldingObject.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
 
             // Calculate object's center position based on the offset we stored
             // NOTE: We need to convert the local-space point back to world coordinates
@@ -249,7 +244,7 @@ public class GravGun : MonoBehaviour
 
             // Calculate force
             //Vector3 force = toDestination / Time.fixedDeltaTime;
-            Vector3 force = Vector3.Slerp(toDestination, holdPoint, Time.fixedDeltaTime * SlerpSpeed);
+            Vector3 force = Vector3.Slerp(toDestination, holdPoint, Time.fixedDeltaTime * Vector3.Distance(centerDestination.normalized, HoldingObject.transform.position.normalized) );
 
        
 

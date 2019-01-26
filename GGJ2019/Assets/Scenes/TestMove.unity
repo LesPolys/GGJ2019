@@ -3116,7 +3116,7 @@ MonoBehaviour:
   minDistance: 2
   maxDistance: 10
   chargeSlider: {fileID: 876876927}
-  SlerpSpeed: 11.76
+  SlerpSpeed: 2
   ChargeBeforeShot: 1
   instaShotChargeValue: 1
   initialHoldingPoint: {fileID: 1693261505}
