@@ -131,7 +131,7 @@ public class GravGun : MonoBehaviour
                 if (Input.GetMouseButtonUp(0))
                 {
                     ShootGravGun(chargeValue);
-
+                    
                 }
 
                 if (Input.GetMouseButton(0))
@@ -157,7 +157,7 @@ public class GravGun : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     ShootGravGun(instaShotChargeValue);
-
+                    
                 }
 
             }
@@ -200,10 +200,13 @@ public class GravGun : MonoBehaviour
 
         CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
 
+
+        HoldingObject.useGravity = true;
+
         HoldingObject = null;
         chargeValue = 0.0f;
         chargeSlider.value = chargeValue;
-        HoldingObject.useGravity = true;
+        
 
     }
 
