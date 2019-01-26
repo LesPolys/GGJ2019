@@ -18,8 +18,7 @@ public class GravGunJuice : MonoBehaviour
     void Update()
     {
 
-   
-
+ 
         Quaternion targetRotation = Quaternion.LookRotation(lookpoint.transform.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, smoothTime * Time.deltaTime);
 
