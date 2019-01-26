@@ -7,7 +7,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class RigidbodyFirstPersonController : MonoBehaviour
     {
-    public GravGun gravGun;
+        [SerializeField]
+        private GravGun m_GravityGunRef;
        
 
         [Serializable]
@@ -216,8 +217,8 @@ public class RigidbodyFirstPersonController : MonoBehaviour
             
             Vector2 input = new Vector2
                 {
-                    x = CrossPlatformInputManager.GetAxis("Horizontal"),
-                    y = CrossPlatformInputManager.GetAxis("Vertical")
+                    x = CrossPlatformInputManager.GetAxisRaw("Horizontal"),
+                    y = CrossPlatformInputManager.GetAxisRaw("Vertical")
                 };
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
@@ -232,8 +233,7 @@ public class RigidbodyFirstPersonController : MonoBehaviour
             // get the rotation before it's changed
             float oldYRotation = transform.eulerAngles.y;
 
-            mouseLook.LookRotation (transform, cam.transform);
-
+            mouseLook.LookRotation(transform, cam.transform, m_GravityGunRef.IsRotating);
             if (m_IsGrounded || advancedSettings.airControl)
             {
                 // Rotate the rigidbody velocity to match the new direction that the character is looking

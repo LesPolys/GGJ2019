@@ -32,6 +32,7 @@ public class GravGun : MonoBehaviour
 
     /// <summary>Tracks player input to rotate current object. Used and reset every fixedupdate call</summary>
     private Vector2 rotationInput;
+    public bool IsRotating { get; private set; }
 
     /// <summary>The maximum distance at which a new object can be picked up</summary>
     private const float maxGrabDistance = 30;
@@ -94,8 +95,12 @@ public class GravGun : MonoBehaviour
             if (Input.GetKey(KeyCode.R))
             {
                 rotationInput += new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+                IsRotating = true;
             }
-
+            else
+            {
+                IsRotating = false;
+            }
         
 
 
