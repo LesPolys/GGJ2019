@@ -244,7 +244,7 @@ public class GravGun : MonoBehaviour
 
             // Calculate force
             //Vector3 force = toDestination / Time.fixedDeltaTime;
-            Vector3 force = Vector3.Slerp(toDestination, holdPoint, Time.fixedDeltaTime * Vector3.Distance(centerDestination.normalized, HoldingObject.transform.position.normalized) );
+            Vector3 force = Vector3.Slerp(toDestination, holdPoint, Time.fixedDeltaTime * Vector3.Distance(centerDestination.normalized, HoldingObject.transform.position.normalized) ) * SlerpSpeed;
 
        
 
