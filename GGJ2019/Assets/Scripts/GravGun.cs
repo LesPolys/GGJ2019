@@ -15,6 +15,8 @@ public class GravGun : MonoBehaviour
     private float chargeValue;
     public Slider chargeSlider;
 
+    public Transform initialHoldingPoint;
+
     /// <summary>The rigidbody we are currently holding</summary>
     public Rigidbody HoldingObject { get; private set; }
 
@@ -47,7 +49,7 @@ public class GravGun : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1) && HoldingObject != null)
         {
             // We are not holding the mouse button. Release the object and return before checking for a new one
 
@@ -55,7 +57,8 @@ public class GravGun : MonoBehaviour
             {
                 // Reset the rigidbody to how it was before we grabbed it
                 HoldingObject.interpolation = initialInterpolationSetting;
-
+                chargeValue = 0.0f;
+                chargeSlider.value = chargeValue;
                 HoldingObject = null;
             }
 
@@ -80,11 +83,11 @@ public class GravGun : MonoBehaviour
                     HoldingObject = hit.rigidbody;
                     initialInterpolationSetting = HoldingObject.interpolation;
                     rotationDifferenceEuler = hit.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
-
                     hitOffsetLocal = hit.transform.InverseTransformVector(hit.point - hit.transform.position);
 
-                    currentGrabDistance = Vector3.Distance(ray.origin, hit.point);
-
+                    //currentGrabDistance = Vector3.Distance(ray.origin, hit.point);
+                    currentGrabDistance = Vector3.Distance(ray.origin, initialHoldingPoint.position);
+                    
                     // Set rigidbody's interpolation for proper collision detection when being moved by the player
                     HoldingObject.interpolation = RigidbodyInterpolation.Interpolate;
                 }
@@ -119,12 +122,13 @@ public class GravGun : MonoBehaviour
 
             // Get the destination point for the point on the object we grabbed
             Vector3 holdPoint = ray.GetPoint(currentGrabDistance);
-            Debug.DrawLine(ray.origin, holdPoint, Color.blue, Time.fixedDeltaTime);
+           // Debug.DrawLine(ray.origin, holdPoint, Color.blue, Time.fixedDeltaTime);
 
             // Apply any intentional rotation input made by the player & clear tracked input
             Vector3 currentEuler = HoldingObject.rotation.eulerAngles;
             HoldingObject.transform.RotateAround(holdPoint, transform.right, rotationInput.y);
             HoldingObject.transform.RotateAround(holdPoint, transform.up, -rotationInput.x);
+        
 
             // Remove all torque, reset rotation input & store the rotation difference for next FixedUpdate call
             HoldingObject.angularVelocity = Vector3.zero;
@@ -140,6 +144,8 @@ public class GravGun : MonoBehaviour
 
             // Calculate force
             Vector3 force = toDestination / Time.fixedDeltaTime;
+
+       
 
             // Remove any existing velocity and add force to move to final position
             HoldingObject.velocity = Vector3.zero;
