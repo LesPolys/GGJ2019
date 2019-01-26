@@ -2,12 +2,14 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.Characters.FirstPerson
-{
-    [RequireComponent(typeof (Rigidbody))]
-    [RequireComponent(typeof (CapsuleCollider))]
-    public class RigidbodyFirstPersonController : MonoBehaviour
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
+
+public class RigidbodyFirstPersonController : MonoBehaviour
     {
+    public GravGun gravGun;
+       
+
         [Serializable]
         public class MovementSettings
         {
@@ -261,5 +263,4 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jumping = false;
             }
         }
-    }
 }

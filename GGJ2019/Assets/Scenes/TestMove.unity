@@ -726,6 +726,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootForce: 100
   pushPullForce: 0.1
+  minDistance: 2
+  maxDistance: 10
 --- !u!1 &1968217534
 GameObject:
   m_ObjectHideFlags: 0

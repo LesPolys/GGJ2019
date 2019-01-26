@@ -2,28 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/* "Gravity Gun" script I quickly threw together to help another user out on Reddit.
- * When clicking the mouse button, you will grab a rigidbody object in front of the
- * main camera's view. 
- * Some initial information is recorded about where you grabbed the object, and
- * the difference between it's rotation and yours.
- * 
- * The object will be moved around according to the offset point you initially
- * picked up.
- * Moving around, the object will rotate with the player so that the player will
- * always be viewing the object at the same angle. 
- * 
- * 
- * Feel free to use or modify this script however you see fit.
- * I hope you guys can learn something from this script. Enjoy :)
- * 
- * Original author: Jake Perry, reddit.com/user/nandos13
- */
+
 public class GravGun : MonoBehaviour
 {
 
     public float shootForce;
     public float pushPullForce;
+    public float minDistance;
+    public float maxDistance;
+
+  
 
     /// <summary>The rigidbody we are currently holding</summary>
     private new Rigidbody rigidbody;
@@ -113,9 +101,7 @@ public class GravGun : MonoBehaviour
 
         }
 
-        // NOTE: You may want to write some code here to prevent your player's aim from moving while you rotate objects
-        // Eg.
-        // playerAimScript.enabled = !Input.GetKey(KeyCode.R);
+
     }
 
     private void FixedUpdate()
@@ -169,18 +155,24 @@ public class GravGun : MonoBehaviour
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             {
-
-                currentGrabDistance += pushPullForce;
-
-              //  rigidbody.velocity = Vector3.zero;
-               // rigidbody.AddForce((rigidbody.transform.position - transform.position) * pushPullForce, ForceMode.VelocityChange);
+                float newGrabDistance = currentGrabDistance + pushPullForce;
+                if (newGrabDistance > maxDistance)
+                {
+                    newGrabDistance = currentGrabDistance;
+                }
+                currentGrabDistance = newGrabDistance;
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             {
 
-                currentGrabDistance -= pushPullForce;
-                //  rigidbody.velocity = Vector3.zero;
-                //  rigidbody.AddForce((rigidbody.transform.position - transform.position) * -pushPullForce, ForceMode.VelocityChange);
+                float newGrabDistance = currentGrabDistance - pushPullForce;
+                if (newGrabDistance < minDistance)
+                {
+                    newGrabDistance = currentGrabDistance;
+                }
+                currentGrabDistance = newGrabDistance;
+
+              
             }
 
 

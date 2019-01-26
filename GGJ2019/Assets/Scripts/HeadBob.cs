@@ -2,9 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.Utility;
 
-namespace UnityStandardAssets.Characters.FirstPerson
-{
-    public class HeadBob : MonoBehaviour
+public class HeadBob : MonoBehaviour
     {
         public Camera Camera;
         public CurveControlledBob motionBob = new CurveControlledBob();
@@ -51,5 +49,4 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_PreviouslyGrounded = rigidbodyFirstPersonController.Grounded;
           //  m_CameraRefocus.SetFocusPoint();
         }
-    }
 }

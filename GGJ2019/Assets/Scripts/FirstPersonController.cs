@@ -4,11 +4,9 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
 
-namespace UnityStandardAssets.Characters.FirstPerson
-{
-    [RequireComponent(typeof (CharacterController))]
-    [RequireComponent(typeof (AudioSource))]
-    public class FirstPersonController : MonoBehaviour
+[RequireComponent(typeof (CharacterController))]
+[RequireComponent(typeof (AudioSource))]
+public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
@@ -255,5 +253,4 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
-    }
 }
