@@ -21,6 +21,10 @@ using UnityEngine;
  */
 public class GravGun : MonoBehaviour
 {
+
+    public float shootForce;
+    public float pushPullForce;
+
     /// <summary>The rigidbody we are currently holding</summary>
     private new Rigidbody rigidbody;
 
@@ -156,17 +160,27 @@ public class GravGun : MonoBehaviour
 
             if (Input.GetMouseButton(0))
             {
-                // shoot the thing
+            
+                rigidbody.AddForce((rigidbody.transform.position - transform.position) * shootForce, ForceMode.Force );
+                rigidbody.interpolation = initialInterpolationSetting;
+
+                rigidbody = null;
             }
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             {
-                //move away from the 
+
+                currentGrabDistance += pushPullForce;
+
+              //  rigidbody.velocity = Vector3.zero;
+               // rigidbody.AddForce((rigidbody.transform.position - transform.position) * pushPullForce, ForceMode.VelocityChange);
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             {
-                //move towards  
 
+                currentGrabDistance -= pushPullForce;
+                //  rigidbody.velocity = Vector3.zero;
+                //  rigidbody.AddForce((rigidbody.transform.position - transform.position) * -pushPullForce, ForceMode.VelocityChange);
             }
 
 
