@@ -13,5 +13,7 @@ public class UIManager : MonoBehaviour
         s_instance = this;
     }
 
+    public void ShowMessageOnHUD(Transform worldOrigin, string message) { }
 
+    public void ShowEndGameScreen() { }
 }
