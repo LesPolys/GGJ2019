@@ -14,7 +14,7 @@ public class GravGun : MonoBehaviour
   
 
     /// <summary>The rigidbody we are currently holding</summary>
-    private new Rigidbody rigidbody;
+    public Rigidbody HoldingObject { get; private set; }
 
     #region Held Object Info
     /// <summary>The offset vector from the object's position to hit point, in local space</summary>
@@ -48,18 +48,18 @@ public class GravGun : MonoBehaviour
         {
             // We are not holding the mouse button. Release the object and return before checking for a new one
 
-            if (rigidbody != null)
+            if (HoldingObject != null)
             {
                 // Reset the rigidbody to how it was before we grabbed it
-                rigidbody.interpolation = initialInterpolationSetting;
+                HoldingObject.interpolation = initialInterpolationSetting;
 
-                rigidbody = null;
+                HoldingObject = null;
             }
 
             return;
         }
 
-        if (Input.GetMouseButtonDown(1) && rigidbody == null)
+        if (Input.GetMouseButtonDown(1) && HoldingObject == null)
         {
             // We are not holding an object, look for one to pick up
 
@@ -74,8 +74,8 @@ public class GravGun : MonoBehaviour
                 if (hit.rigidbody != null && !hit.rigidbody.isKinematic)
                 {
                     // Track rigidbody's initial information
-                    rigidbody = hit.rigidbody;
-                    initialInterpolationSetting = rigidbody.interpolation;
+                    HoldingObject = hit.rigidbody;
+                    initialInterpolationSetting = HoldingObject.interpolation;
                     rotationDifferenceEuler = hit.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
 
                     hitOffsetLocal = hit.transform.InverseTransformVector(hit.point - hit.transform.position);
@@ -83,7 +83,7 @@ public class GravGun : MonoBehaviour
                     currentGrabDistance = Vector3.Distance(ray.origin, hit.point);
 
                     // Set rigidbody's interpolation for proper collision detection when being moved by the player
-                    rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
+                    HoldingObject.interpolation = RigidbodyInterpolation.Interpolate;
                 }
             }
         }
@@ -106,51 +106,51 @@ public class GravGun : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rigidbody)
+        if (HoldingObject)
         {
             // We are holding an object, time to rotate & move it
 
             Ray ray = CenterRay();
 
             // Rotate the object to remain consistent with any changes in player's rotation
-            rigidbody.MoveRotation(Quaternion.Euler(rotationDifferenceEuler + transform.rotation.eulerAngles));
+            HoldingObject.MoveRotation(Quaternion.Euler(rotationDifferenceEuler + transform.rotation.eulerAngles));
 
             // Get the destination point for the point on the object we grabbed
             Vector3 holdPoint = ray.GetPoint(currentGrabDistance);
             Debug.DrawLine(ray.origin, holdPoint, Color.blue, Time.fixedDeltaTime);
 
             // Apply any intentional rotation input made by the player & clear tracked input
-            Vector3 currentEuler = rigidbody.rotation.eulerAngles;
-            rigidbody.transform.RotateAround(holdPoint, transform.right, rotationInput.y);
-            rigidbody.transform.RotateAround(holdPoint, transform.up, -rotationInput.x);
+            Vector3 currentEuler = HoldingObject.rotation.eulerAngles;
+            HoldingObject.transform.RotateAround(holdPoint, transform.right, rotationInput.y);
+            HoldingObject.transform.RotateAround(holdPoint, transform.up, -rotationInput.x);
 
             // Remove all torque, reset rotation input & store the rotation difference for next FixedUpdate call
-            rigidbody.angularVelocity = Vector3.zero;
+            HoldingObject.angularVelocity = Vector3.zero;
             rotationInput = Vector2.zero;
-            rotationDifferenceEuler = rigidbody.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
+            rotationDifferenceEuler = HoldingObject.transform.rotation.eulerAngles - transform.rotation.eulerAngles;
 
             // Calculate object's center position based on the offset we stored
             // NOTE: We need to convert the local-space point back to world coordinates
-            Vector3 centerDestination = holdPoint - rigidbody.transform.TransformVector(hitOffsetLocal);
+            Vector3 centerDestination = holdPoint - HoldingObject.transform.TransformVector(hitOffsetLocal);
 
             // Find vector from current position to destination
-            Vector3 toDestination = centerDestination - rigidbody.transform.position;
+            Vector3 toDestination = centerDestination - HoldingObject.transform.position;
 
             // Calculate force
             Vector3 force = toDestination / Time.fixedDeltaTime;
 
             // Remove any existing velocity and add force to move to final position
-            rigidbody.velocity = Vector3.zero;
-            rigidbody.AddForce(force, ForceMode.VelocityChange);
+            HoldingObject.velocity = Vector3.zero;
+            HoldingObject.AddForce(force, ForceMode.VelocityChange);
 
 
             if (Input.GetMouseButton(0))
             {
             
-                rigidbody.AddForce((rigidbody.transform.position - transform.position) * shootForce, ForceMode.Force );
-                rigidbody.interpolation = initialInterpolationSetting;
+                HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce, ForceMode.Force );
+                HoldingObject.interpolation = initialInterpolationSetting;
 
-                rigidbody = null;
+                HoldingObject = null;
             }
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
