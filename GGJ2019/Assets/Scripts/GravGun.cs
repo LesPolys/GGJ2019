@@ -36,7 +36,7 @@ public class GravGun : MonoBehaviour
     private Vector2 rotationInput;
 
     /// <summary>The maximum distance at which a new object can be picked up</summary>
-    private const float maxGrabDistance = 30;
+    public float maxGrabDistance = 30;
 
     /// <returns>Ray from center of the main camera's viewport forward</returns>
     private Ray CenterRay()
