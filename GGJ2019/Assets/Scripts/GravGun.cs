@@ -151,6 +151,15 @@ public class GravGun : MonoBehaviour
             HoldingObject.velocity = Vector3.zero;
             HoldingObject.AddForce(force, ForceMode.VelocityChange);
 
+            if (Input.GetMouseButtonUp(0))
+            {
+                HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * chargeValue, ForceMode.Force);
+                HoldingObject.interpolation = initialInterpolationSetting;
+
+                HoldingObject = null;
+                chargeValue = 0.0f;
+                chargeSlider.value = chargeValue;
+            }
 
             if (Input.GetMouseButton(0))
             {
@@ -166,15 +175,7 @@ public class GravGun : MonoBehaviour
                 
             }
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * chargeValue, ForceMode.Force);
-                HoldingObject.interpolation = initialInterpolationSetting;
-
-                HoldingObject = null;
-                chargeValue = 0.0f;
-                chargeSlider.value = chargeValue;
-            }
+         
 
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
