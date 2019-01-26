@@ -216,8 +216,8 @@ public class RigidbodyFirstPersonController : MonoBehaviour
             
             Vector2 input = new Vector2
                 {
-                    x = CrossPlatformInputManager.GetAxis("Horizontal"),
-                    y = CrossPlatformInputManager.GetAxis("Vertical")
+                    x = CrossPlatformInputManager.GetAxisRaw("Horizontal"),
+                    y = CrossPlatformInputManager.GetAxisRaw("Vertical")
                 };
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;

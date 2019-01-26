@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class GravGun : MonoBehaviour
@@ -11,7 +12,8 @@ public class GravGun : MonoBehaviour
     public float minDistance;
     public float maxDistance;
 
-  
+    private float chargeValue;
+    public Slider chargeSlider;
 
     /// <summary>The rigidbody we are currently holding</summary>
     public Rigidbody HoldingObject { get; private set; }
@@ -146,12 +148,28 @@ public class GravGun : MonoBehaviour
 
             if (Input.GetMouseButton(0))
             {
-            
-                HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce, ForceMode.Force );
+          
+                if(chargeValue < 1)
+                {
+                    chargeValue += 0.01f;
+                }else{
+                    chargeValue = 1;
+                }
+                chargeSlider.value = chargeValue;
+           
+                
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * chargeValue, ForceMode.Force);
                 HoldingObject.interpolation = initialInterpolationSetting;
 
                 HoldingObject = null;
+                chargeValue = 0.0f;
+                chargeSlider.value = chargeValue;
             }
+
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             {
