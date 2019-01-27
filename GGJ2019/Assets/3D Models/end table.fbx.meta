@@ -3,12 +3,26 @@ guid: 8aa140b004e902e4a932d9392993c042
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Sphere.001
+    100000: Cube.002
+    100002: //RootNode
+    100004: Sphere
+    100006: Sphere.001
+    400000: Cube.002
+    400002: //RootNode
+    400004: Sphere
+    400006: Sphere.001
+    2100000: Material.002
+    2100002: Material.001
+    2100004: Material
+    2300000: Cube.002
+    2300002: Sphere
+    2300004: Sphere.001
+    3300000: Cube.002
+    3300002: Sphere
+    3300004: Sphere.001
+    4300000: Sphere
+    4300002: Cube.002
+    4300004: Sphere.001
   externalObjects: {}
   materials:
     importMaterials: 1
