@@ -1,4 +1,4 @@
-﻿
+﻿#if UNITY_EDITOR
 using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -19,4 +19,4 @@ public class FurnitureEditor : Editor
 
     }
 }
-
+#endif
