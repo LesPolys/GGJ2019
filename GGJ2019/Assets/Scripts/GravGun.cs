@@ -74,7 +74,7 @@ public class GravGun : MonoBehaviour
                 HoldingObject.interpolation = initialInterpolationSetting;
                 chargeValue = 0.0f;
                 chargeSlider.value = chargeValue;
-                
+                HoldingObject.useGravity = true;
                 HoldingObject = null;
             }
 
