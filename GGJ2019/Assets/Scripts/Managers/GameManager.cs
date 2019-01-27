@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
     #region Public
 
-    public void AddToReceipt(Transform origin, string Name, float value)
+    public void AddToReceipt(Transform origin, string name, float value)
     {
         m_Reciept.Add(new Transaction() { Value = (int)value, Name = name, Origin = origin });
         ShowTransactionUI(origin, (int)value);
