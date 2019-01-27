@@ -65,7 +65,7 @@ public class Radio : MonoBehaviour
             if (currentClip >= audioClips.Length)
             {
                 currentClip = 0;
-                Debug.Log("CurrentClipReset");
+                //Debug.Log("CurrentClipReset");
                 
             }
             else
