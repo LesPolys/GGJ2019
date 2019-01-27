@@ -66,7 +66,7 @@ public class Furniture : MonoBehaviour
         float finalDistance = Vector3.Distance(transform.position, finalPosition);
         if (finalDistance >= maxDistValue)
         {
-            distanceScore = -maxScoreVal;
+            distanceScore = -maxScoreVal * 10;
         }
         else
         {

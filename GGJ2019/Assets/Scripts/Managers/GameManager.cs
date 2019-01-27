@@ -5,14 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private float m_SecondsUntilGameStart = 5f;
+    private float m_SecondsUntilGameStart = 25f;
 
     #region Singlton
     private static GameManager s_instance = null;
     public static GameManager Instance { get { return s_instance; } }
     #endregion
     
-    private float m_TimeRemaining = 5f; // In Seconds
+    private float m_TimeRemaining = 180f; // In Seconds
 
     private List<Transaction> m_Reciept;
 
