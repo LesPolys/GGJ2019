@@ -19,7 +19,7 @@ public class Furniture : MonoBehaviour
     private bool isMoving;
     private bool isCountingDown;
 
-    public float rotScoreMultiplier;
+    float rotScoreMultiplier = 2.5f;
 
     public float finalScore { get; private set; }
 
@@ -66,7 +66,7 @@ public class Furniture : MonoBehaviour
         float finalDistance = Vector3.Distance(transform.position, finalPosition);
         if (finalDistance >= maxDistValue)
         {
-            distanceScore = 0;
+            distanceScore = -maxScoreVal;
         }
         else
         {
@@ -76,7 +76,7 @@ public class Furniture : MonoBehaviour
             }
             else
             {
-                distanceScore = maxScoreVal / finalDistance;
+                distanceScore = (Mathf.Pow(-finalDistance, 2)) + maxScoreVal;
             }
             
         }
