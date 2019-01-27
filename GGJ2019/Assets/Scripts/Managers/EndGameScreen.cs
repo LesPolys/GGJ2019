@@ -62,7 +62,13 @@ public class EndGameScreen : MonoBehaviour
         QuitButton.GetComponent<Button>().onClick.AddListener(OnQuitPressed);
         RestartButton.GetComponent<Button>().onClick.AddListener(OnRestartPressed);
 
+      
+    }
+
+    private void OnEnable()
+    {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void OnQuitPressed()
