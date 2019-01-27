@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Cursor.visible = false;
         while(m_SecondsUntilGameStart > 0f)
         {
             yield return null;
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         Debug.Log("Game Ended!");
-        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh+");
+        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh #"); // TODO: Pass in receipt transactions
     }
 
     private void ShowTransactionUI(Transform origin, int value)
