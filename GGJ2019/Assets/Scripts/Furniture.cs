@@ -5,24 +5,32 @@ using UnityEngine;
 public class Furniture : MonoBehaviour
 {
 
-    Vector3 finalPosition;
-    Quaternion finalRotation;
+    public Vector3 finalPosition;
+    public Quaternion finalRotation;
 
     Vector3 lastPosition;
 
-    public float maxScoreVale;
-    public float scoreCheckCountDown;
+    public string furnitureName;
+
+    public float maxScoreVal;
+    public float scoreCheckCountDown = 2;
     public const float maxDistValue = 10.0f;
     public float minDistCutoff = 0.01f;
     private bool isMoving;
     private bool isCountingDown;
 
+    public float rotScoreMultiplier;
+
+    public float finalScore { get; private set; }
+
     private void Update()
     {
-        if (transform.position != lastPosition) // has it started moving
+        if (transform.position != lastPosition && !isCountingDown) // has it started moving
         {
-            transform.position = lastPosition;
+            lastPosition = transform.position;
             isMoving = true;
+            isCountingDown = false;
+            scoreCheckCountDown = 2;
 
         }
 
@@ -36,9 +44,12 @@ public class Furniture : MonoBehaviour
             scoreCheckCountDown -= Time.deltaTime;
             if(scoreCheckCountDown <= 0)
             {
+                scoreCheckCountDown = 2;
+                isCountingDown = false;
                 RunScoreCheck();
             }
         }
+
 
     }
 
@@ -49,7 +60,7 @@ public class Furniture : MonoBehaviour
     }
 
 
-    private void RunScoreCheck()
+    public void RunScoreCheck()
     {
         float distanceScore;
         float finalDistance = Vector3.Distance(transform.position, finalPosition);
@@ -61,20 +72,32 @@ public class Furniture : MonoBehaviour
         {
             if (finalDistance < minDistCutoff)
             {
-                distanceScore = maxScoreVale;
+                distanceScore = maxScoreVal;
             }
             else
             {
-                distanceScore = maxScoreVale / finalDistance;
+                distanceScore = maxScoreVal / finalDistance;
             }
             
         }
 
-       // transform.rotation.
-      
+
+        float xAngle = transform.rotation.eulerAngles.x - finalRotation.eulerAngles.x;
+        float xScore = (Mathf.Cos(xAngle) / rotScoreMultiplier) + 1;
+
+        float yAngle = transform.rotation.eulerAngles.y - finalRotation.eulerAngles.y;
+        float yScore = (Mathf.Cos(yAngle) / rotScoreMultiplier) + 1;
+
+        float zAngle = transform.rotation.eulerAngles.z - finalRotation.eulerAngles.z;
+        float zScore = (Mathf.Cos(zAngle) / rotScoreMultiplier) + 1;
 
 
-   
+        float finalRotScore = xScore + yScore + zScore / 3;
+
+
+        finalScore = distanceScore + finalRotScore;
+        print(furnitureName);
+        print(furnitureName + finalScore);
     }
 
 
