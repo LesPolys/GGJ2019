@@ -1135,6 +1135,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8980676281490738472, guid: 84684634aba899d40a5b863627354fd2,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f9c4510fb864d80418cc63c715c180cc, type: 3}
+    - target: {fileID: 8980676281490738472, guid: 84684634aba899d40a5b863627354fd2,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f89f288c05eabf45987fb03daaed4bf, type: 3}
     - target: {fileID: 8980676281490738475, guid: 84684634aba899d40a5b863627354fd2,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
