@@ -69,6 +69,8 @@ public class Furniture : MonoBehaviour
             }
             
         }
+
+       // transform.rotation.
       
 
 
