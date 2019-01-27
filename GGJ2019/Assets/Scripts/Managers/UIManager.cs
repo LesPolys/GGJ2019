@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowEndGameScreen(ref List<Transaction> receipt, string grade)
     {
-        EndGameScreen.ShowEndGameScore(ref receipt, ref grade, "Moving Trials", 1800);
+        EndGameScreen.ShowEndGameScore(ref receipt, ref grade, "Moving Trials", 450);
 
         InGameHUD.gameObject.SetActive(false);
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,6 +112,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12947468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7291629732611374852, guid: a4feec84e844fae4c8189284f518d0d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1574642007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &12947469
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12947468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1001 &33165919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,7 +152,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 0.934
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -218,13 +238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -13.720217, y: 1.5575781, z: -0.3246708}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &33165924
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -351,13 +370,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 1.0100002, y: 2.06, z: -13.828672}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!1 &85875450
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,13 +563,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -19.110216, y: 1.23, z: -5.8646717}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Bed
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!65 &114325000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -769,13 +786,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -3.852727, y: 1.434578, z: -12.124673}
+  finalRotation: {x: -0.49991277, y: 0.5000873, z: 0.4999127, w: 0.50008726}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!65 &141772805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1047,17 +1063,17 @@ PrefabInstance:
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.819521
+      value: 36.13
       objectReference: {fileID: 0}
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.60642195
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.41532898
+      value: 11.05
       objectReference: {fileID: 0}
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
@@ -1072,12 +1088,12 @@ PrefabInstance:
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.083777465
       objectReference: {fileID: 0}
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9964845
       objectReference: {fileID: 0}
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
@@ -1097,7 +1113,7 @@ PrefabInstance:
     - target: {fileID: 7553452381120159671, guid: 379d97f93fa0d45429a791f50e909782,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 9.611
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7553452381443400372, guid: 379d97f93fa0d45429a791f50e909782, type: 3}
@@ -1128,13 +1144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -13.4706955, y: 1.23, z: -21.1}
+  finalRotation: {x: -0, y: -0, z: -0, w: 1}
   furnitureName: Bed
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!65 &244009536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1190,31 +1205,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.26
+      value: 35.93
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.16
+      value: 7.17
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.15735538
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7072302
+      value: 0.68945295
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7069834
+      value: 0.5426652
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.45322013
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_RootOrder
@@ -1222,15 +1237,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
+      value: -62.989002
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 269.973
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -37.252003
       objectReference: {fileID: 0}
     - target: {fileID: 1359295540, guid: b6e4d9ec77548bc4d9514ee17e83bf8c, type: 3}
       propertyPath: m_LocalScale.y
@@ -1266,13 +1281,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -5.030216, y: 0.50357807, z: -16.524672}
+  finalRotation: {x: -0, y: 0.7072302, z: 0.7069834, w: 0}
   furnitureName: Sofa
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &282183422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1322,7 +1336,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -1408,13 +1422,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -22.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &298796760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1524,13 +1537,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -6.4699993, y: 0.79, z: -5.290332}
+  finalRotation: {x: 0.0000002270125, y: 0.7071068, z: 0.7071068, w: -0.00000023841855}
   furnitureName: Toilet
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &300645543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1649,7 +1661,7 @@ Transform:
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &315468797
 PrefabInstance:
@@ -1726,13 +1738,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -16.04, y: 0.8868903, z: -3.039999}
+  finalRotation: {x: -0, y: -1, z: -0, w: 0}
   furnitureName: Display Case
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &315468800
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1781,31 +1792,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.823
+      value: 32.444
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4364219
+      value: 0.908
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.247
+      value: 20.215
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.19869067
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.7452256
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.25270832
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: -0.58420837
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_RootOrder
@@ -1813,15 +1824,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -37.503002
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 256.167
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 0.063
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalScale.y
@@ -1886,13 +1897,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 2.5327835, y: 2.06, z: -9.437672}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!1001 &341699438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1913,7 +1923,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -1999,13 +2009,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -17.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &341699443
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2119,13 +2128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -18.7, y: 1.05, z: -21.98}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Bath
   maxScoreVal: 20
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!65 &399044915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2283,13 +2291,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 5.879999, y: 1.23, z: -6.5550747}
+  finalRotation: {x: 0.0027088823, y: 0.70710164, z: 0.70710164, w: -0.0027088823}
   furnitureName: Washing Machine
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!1001 &465172421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2379,13 +2386,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -2.9202166, y: 0.6735781, z: -18.313726}
+  finalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
   furnitureName: Sofa
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &465172425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2534,7 +2540,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -2620,13 +2626,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -19.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &489160240
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2663,7 +2668,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -2749,13 +2754,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -14.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &495749820
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2853,13 +2857,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -5.013727, y: 1.4345776, z: -14.088671}
+  finalRotation: {x: 0.000000081668446, y: 0.7072302, z: 0.7069834, w: -0.0000000149011585}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!65 &497847830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2999,13 +3002,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 1.0100002, y: 2.06, z: -11.825671}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!1001 &538398362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3089,13 +3091,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -10.01, y: 0.8868903, z: -17.94}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Display Case
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &538398365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3243,13 +3244,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -5.15946, y: 1.968, z: -22.411}
+  finalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   furnitureName: TV
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!4 &549486677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 41267311, guid: e1adcaf7f48a633469ba4ad1ee033c0b,
@@ -3271,12 +3271,12 @@ PrefabInstance:
     - target: {fileID: 6878289404604917330, guid: 198e8c6c0ea5f784a9130eb07e1760ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.25421
+      value: 37.12
       objectReference: {fileID: 0}
     - target: {fileID: 6878289404604917330, guid: 198e8c6c0ea5f784a9130eb07e1760ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.60642195
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 6878289404604917330, guid: 198e8c6c0ea5f784a9130eb07e1760ca,
         type: 3}
@@ -3364,13 +3364,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 4.963993, y: 1.23, z: -6.54}
+  finalRotation: {x: -0, y: 0.7072302, z: 0.7069834, w: 0}
   furnitureName: Dryer
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!65 &552612335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3483,13 +3482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -6.21, y: 0.8868903, z: -0.20999908}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Display Case
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &556333644
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3633,13 +3631,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -7.58, y: 1.3797792, z: -22.660872}
+  finalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &572565675
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3764,13 +3761,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -7.2257366, y: 1.3797792, z: 3.4791965}
+  finalRotation: {x: -0.00000073760737, y: 0.70710677, z: 0.7071068, w: 0.00000073760737}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &604814997
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3807,7 +3803,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 0.932
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -3893,13 +3889,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 8.349783, y: 1.555578, z: -22.584671}
+  finalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &610120655
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3991,13 +3986,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 2.8530006, y: 1.431, z: -22.28349}
+  finalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &662921647
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4141,13 +4135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -2.75, y: 1.3797792, z: -22.660872}
+  finalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &679661878
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4245,13 +4238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -4.9502163, y: 1.433578, z: -10.554671}
+  finalRotation: {x: -0.7069834, y: 0.00000006705522, z: 0.000000037636912, w: 0.7072302}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!65 &709061075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4336,7 +4328,7 @@ PrefabInstance:
     - target: {fileID: 2574288291217297144, guid: 3f56b6df404d0434bb8ba738fc87c524,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2574288291217297144, guid: 3f56b6df404d0434bb8ba738fc87c524,
         type: 3}
@@ -4406,19 +4398,13 @@ PrefabInstance:
     - target: {fileID: 2574288291563884441, guid: 3f56b6df404d0434bb8ba738fc87c524,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: 0.00010681152
       objectReference: {fileID: 0}
     - target: {fileID: 2574288291563884441, guid: 3f56b6df404d0434bb8ba738fc87c524,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: -281.09982
       objectReference: {fileID: 0}
-    - target: {fileID: 2574288291038786215, guid: 3f56b6df404d0434bb8ba738fc87c524,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f69638037ead2c847a10cebfc191a07a,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f56b6df404d0434bb8ba738fc87c524, type: 3}
 --- !u!114 &745408057 stripped
@@ -4541,13 +4527,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -11.054699, y: 1.3797792, z: -22.638544}
+  finalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &750328801
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4584,7 +4569,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -4670,13 +4655,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -15.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &761276136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4786,13 +4770,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -7.190216, y: 0.887729, z: 3.4853287}
+  finalRotation: {x: -0, y: 1, z: -0, w: 0.0000009983777}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &790783405
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4886,7 +4869,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &810120992
 PrefabInstance:
@@ -4981,13 +4964,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -7.5599995, y: 0.887729, z: -22.667}
+  finalRotation: {x: -0, y: -0, z: -0, w: 1}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &810120996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5037,7 +5019,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -5123,13 +5105,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -13.850216, y: 1.5635781, z: -5.6046715}
+  finalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &845119555
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5256,13 +5237,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 8.01, y: 2.06, z: -14.546998}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!1001 &916066065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5276,15 +5256,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.300217
+      value: 34.47
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4364219
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.856
+      value: 5.75
       objectReference: {fileID: 0}
     - target: {fileID: 1385965180, guid: 835084d2519083649bc1ab6dbd93a656, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5373,13 +5353,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 1.0100002, y: 2.06, z: -12.828671}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!1001 &916752476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5393,31 +5372,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7818909
+      value: 37.65
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17642194
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.45629883
+      value: 6.17
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: -0.05445376
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000029057267
+      value: 0.70500696
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000029384375
+      value: 0.70500696
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071067
+      value: 0.054453827
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_RootOrder
@@ -5425,7 +5404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -5433,7 +5412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 360
+      value: 171.167
       objectReference: {fileID: 0}
     - target: {fileID: 1289907546, guid: bac4d847cdd65034ca3fea5814b4fd56, type: 3}
       propertyPath: m_LocalScale.y
@@ -5469,13 +5448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -20.072107, y: 0.8, z: -20.228373}
+  finalRotation: {x: 0.7071068, y: -0.00000029057267, z: -0.00000029384375, w: -0.7071067}
   furnitureName: Toilet
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &916752480
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5518,31 +5496,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.68
+      value: 33.28
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.82
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6
+      value: 17.55
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.7051209
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.05295803
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.052958023
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7051209
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_RootOrder
@@ -5550,15 +5528,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -81.41
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963, type: 3}
       propertyPath: m_LocalScale.y
@@ -5617,13 +5595,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 4.389784, y: 1.443578, z: -22.284672}
+  finalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   furnitureName: Table
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!4 &924335726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963,
@@ -5650,7 +5627,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 0.9319999
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -5736,13 +5713,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 8.349783, y: 1.555578, z: -23.584671}
+  finalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &925123290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5759,6 +5735,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &928668037 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6251857252873478489, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1590741266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4963b80b5b5172148960da56358ad5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1022875735
 GameObject:
   m_ObjectHideFlags: 0
@@ -5858,7 +5846,7 @@ Transform:
   - {fileID: 141772802}
   - {fileID: 1847205138}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1093515169
 PrefabInstance:
@@ -5968,13 +5956,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -15.764699, y: 1.3797792, z: -22.628544}
+  finalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1093515173
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6011,7 +5998,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 0.9319999
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -6097,13 +6084,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 8.349783, y: 1.555578, z: -21.584671}
+  finalRotation: {x: -0.49991274, y: -0.50008726, z: -0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1105487625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6247,13 +6233,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.7502165, y: 1.23, z: 2.125328}
+  finalRotation: {x: -0, y: 1, z: -0, w: 0}
   furnitureName: Bed
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!65 &1166881083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6389,13 +6374,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -12.414696, y: 0.887729, z: 3.4814606}
+  finalRotation: {x: -0, y: 1, z: -0, w: 0.0000009983777}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1188707705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6524,13 +6508,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -2.7855177, y: 0.887729, z: -22.667}
+  finalRotation: {x: -0, y: -0, z: -0, w: 1}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1222638635
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6668,13 +6651,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -20.454086, y: 1.3797792, z: -3.5301914}
+  finalRotation: {x: -0.50000036, y: 0.4999997, z: 0.49999976, w: 0.5000003}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1225528510
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6799,13 +6781,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -20.454086, y: 1.3797792, z: -8.302033}
+  finalRotation: {x: -0.50000036, y: 0.4999997, z: 0.49999976, w: 0.5000003}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1230305549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6914,7 +6895,7 @@ RectTransform:
   m_Children:
   - {fileID: 188724523}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7155,7 +7136,7 @@ Transform:
   - {fileID: 1141202339}
   - {fileID: 85875451}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1307301470
 PrefabInstance:
@@ -7172,17 +7153,17 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.890217
+      value: 38.95
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.48532867
+      value: 4.62
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -7263,13 +7244,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -21.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &1307301475
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7373,13 +7353,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 4.481001, y: 1.433, z: -23.431}
+  finalRotation: {x: -0, y: 0.7072302, z: 0.7069834, w: 0}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1329790784
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7498,13 +7477,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 4.4230003, y: 1.432, z: -21.186}
+  finalRotation: {x: -0.7069834, y: -0, z: -0, w: 0.7072302}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1336983755
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7650,13 +7628,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 8.01, y: 2.06, z: -17.55}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!1001 &1408664016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7750,13 +7727,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -15.800217, y: 0.887729, z: -22.634672}
+  finalRotation: {x: -0, y: -0, z: -0, w: 1}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1408664020
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7894,13 +7870,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -12.450216, y: 1.3797792, z: 3.4753284}
+  finalRotation: {x: -0.00000073760737, y: 0.70710677, z: 0.7071068, w: 0.00000073760737}
   furnitureName: Lamp
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1412908041
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7970,13 +7945,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 7.507, y: 1.479, z: -13.24}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Fridge
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!1001 &1425379584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7992,17 +7966,17 @@ PrefabInstance:
     - target: {fileID: 4844187023994909989, guid: 7d50a5dfdb6997c409d4b5b0d28e7a27,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.797216
+      value: 35.36
       objectReference: {fileID: 0}
     - target: {fileID: 4844187023994909989, guid: 7d50a5dfdb6997c409d4b5b0d28e7a27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8554219
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 4844187023994909989, guid: 7d50a5dfdb6997c409d4b5b0d28e7a27,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.4446716
+      value: 20.41
       objectReference: {fileID: 0}
     - target: {fileID: 4844187023994909989, guid: 7d50a5dfdb6997c409d4b5b0d28e7a27,
         type: 3}
@@ -8194,13 +8168,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -5.3366623, y: 1.248399, z: -19.347878}
+  finalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   furnitureName: Coffee Table
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1482807309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8250,7 +8223,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -8336,13 +8309,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -20.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &1510528296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8359,6 +8331,194 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1574642007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7291629732611374852, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_Name
+      value: moving truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.87552446
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.48317373
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 122.214005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401869399535079461, guid: a4feec84e844fae4c8189284f518d0d2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4feec84e844fae4c8189284f518d0d2, type: 3}
+--- !u!1001 &1590741266
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6251857252873478484, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_Name
+      value: InGameHUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251857252873478490, guid: 7f83a0638b43cda439324fa3e0fa6e81,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f83a0638b43cda439324fa3e0fa6e81, type: 3}
 --- !u!1001 &1603733338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8374,37 +8534,37 @@ PrefabInstance:
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.220217
+      value: 34.59
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37942195
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.764671
+      value: 3.06
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.35843343
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.6097742
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.34222403
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.6185335
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
@@ -8414,17 +8574,17 @@ PrefabInstance:
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 1.493
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 90.034004
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 59.403004
       objectReference: {fileID: 0}
     - target: {fileID: 4934098568033260044, guid: 44024ad5c2a847146bcf5e452287dffa,
         type: 3}
@@ -8462,13 +8622,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -7.0699997, y: 1.003, z: -6.92}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Bath
   maxScoreVal: 20
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!65 &1603733342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8581,13 +8740,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -0.19000053, y: 0.8868903, z: -12.14}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Display Case
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1683344636
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8716,13 +8874,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -11.090217, y: 0.887729, z: -22.644672}
+  finalRotation: {x: -0, y: -0, z: -0, w: 1}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1695240150
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8802,7 +8959,7 @@ PrefabInstance:
     - target: {fileID: 7667621202733798740, guid: 04a5435188a7be748b3acb9b7022f0d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7667621202733798740, guid: 04a5435188a7be748b3acb9b7022f0d6,
         type: 3}
@@ -8827,7 +8984,7 @@ PrefabInstance:
     - target: {fileID: 1150511856267317093, guid: 04a5435188a7be748b3acb9b7022f0d6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.7
+      value: 3.47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04a5435188a7be748b3acb9b7022f0d6, type: 3}
@@ -8980,13 +9137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -7.3802166, y: 0.6635781, z: -18.313726}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Sofa
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &1743876037
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9091,13 +9247,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -7.6499996, y: 0.8868903, z: -8.54}
+  finalRotation: {x: -0, y: -1, z: -0, w: 0}
   furnitureName: Display Case
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1775002856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9153,7 +9308,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -9239,13 +9394,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -18.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1784534089
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9355,13 +9509,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -20.460217, y: 0.887729, z: -8.266514}
+  finalRotation: {x: -0, y: 0.7071065, z: -0, w: 0.7071072}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1796007186
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9492,13 +9645,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -5.152464, y: 1.14, z: -22.423586}
+  finalRotation: {x: -0, y: -0, z: -0, w: 1}
   furnitureName: TV Stand
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 2.5
 --- !u!54 &1806072243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9621,13 +9773,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -20.460217, y: 0.887729, z: -3.4946709}
+  finalRotation: {x: -0, y: 0.7071065, z: -0, w: 0.7071072}
   furnitureName: End Table
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1827973841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9750,13 +9901,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -6.097728, y: 1.4355776, z: -12.182672}
+  finalRotation: {x: 0.49991274, y: 0.50008744, z: 0.49991274, w: -0.5000872}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!65 &1847205141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10068,13 +10218,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 8.01, y: 2.06, z: -15.549998}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!1001 &1928709898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10150,13 +10299,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 6.386999, y: 1.432, z: -22.347}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Chair
   maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1928709901
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10212,7 +10360,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -10298,13 +10446,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -17.240217, y: 1.5535781, z: -18.094671}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1936398479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10404,13 +10551,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 1.1100006, y: 0.8868903, z: -24.7}
+  finalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   furnitureName: Display Case
   maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &1970935430
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10604,13 +10750,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -4.9514, y: 1.4461558, z: -12.091455}
+  finalRotation: {x: -0.50000006, y: 0.50000006, z: 0.5, w: 0.5}
   furnitureName: Table
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!65 &2009963909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10729,7 +10874,7 @@ PrefabInstance:
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2964219
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 3671795796230852007, guid: ff1daf6fc1c5a8c40a200ca556776029,
         type: 3}
@@ -10815,13 +10960,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: -9.4, y: 1.5635781, z: -16.17}
+  finalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
   furnitureName: Bookshelf
   maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
 --- !u!54 &2066879878
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10869,7 +11013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndGameScreen: {fileID: 745408057}
-  InGameHUD: {fileID: 0}
+  InGameHUD: {fileID: 928668037}
 --- !u!114 &2076214271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10883,7 +11027,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SecondsUntilGameStart: 5
-  houseFurniture: []
+  houseFurniture:
+  - {fileID: 399044914}
+  - {fileID: 1424919244}
+  - {fileID: 1603733341}
+  - {fileID: 244009535}
+  - {fileID: 114324999}
+  - {fileID: 1166881082}
+  - {fileID: 552612334}
+  - {fileID: 455079648}
+  - {fileID: 1806072242}
+  - {fileID: 465172424}
+  - {fileID: 924335725}
+  - {fileID: 1743876036}
+  - {fileID: 282183421}
+  - {fileID: 298796759}
+  - {fileID: 1307301474}
+  - {fileID: 1510528295}
+  - {fileID: 489160239}
+  - {fileID: 1784534088}
+  - {fileID: 341699442}
+  - {fileID: 2066879877}
+  - {fileID: 761276135}
+  - {fileID: 495749819}
+  - {fileID: 1482807308}
+  - {fileID: 872997001}
+  - {fileID: 662921646}
+  - {fileID: 1928709900}
+  - {fileID: 1336983754}
+  - {fileID: 1329790783}
+  - {fileID: 1904091778}
+  - {fileID: 2107664603}
+  - {fileID: 1339992786}
+  - {fileID: 916066070}
+  - {fileID: 499611788}
+  - {fileID: 84828705}
+  - {fileID: 321507874}
+  - {fileID: 925123289}
+  - {fileID: 610120654}
+  - {fileID: 1105487624}
+  - {fileID: 1936398478}
+  - {fileID: 33165923}
+  - {fileID: 845119554}
+  - {fileID: 300645542}
+  - {fileID: 916752479}
+  - {fileID: 572565674}
+  - {fileID: 1222638634}
+  - {fileID: 810120995}
+  - {fileID: 679661877}
+  - {fileID: 1695240149}
+  - {fileID: 750328800}
+  - {fileID: 1408664019}
+  - {fileID: 1093515172}
+  - {fileID: 1796007185}
+  - {fileID: 1230305548}
+  - {fileID: 1827973840}
+  - {fileID: 1225528509}
+  - {fileID: 1188707704}
+  - {fileID: 1412908040}
+  - {fileID: 790783404}
+  - {fileID: 604814996}
+  - {fileID: 1775002855}
+  - {fileID: 549486676}
+  - {fileID: 1970935429}
+  - {fileID: 1683344635}
+  - {fileID: 556333643}
+  - {fileID: 538398364}
+  - {fileID: 315468799}
+  - {fileID: 2009963908}
+  - {fileID: 709061074}
+  - {fileID: 497847829}
+  - {fileID: 141772804}
+  - {fileID: 1847205140}
 --- !u!4 &2076214272
 Transform:
   m_ObjectHideFlags: 0
@@ -10896,7 +11111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2103389722
 GameObject:
@@ -11044,10 +11259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c49bcfea204c24796fd5f5bbc7aa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 0, z: 0}
-  finalRotation: {x: 0, y: 0, z: 0, w: 0}
+  finalPosition: {x: 8.01, y: 2.06, z: -16.55}
+  finalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   furnitureName: Cupboards
   maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0

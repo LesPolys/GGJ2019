@@ -41,7 +41,7 @@ public class EndGameScreen : MonoBehaviour
     #endregion
 
     private bool UpdateTotalAmount = false;
-    private float ValueIncrementMultiplier = 15f;
+    private float ValueIncrementMultiplier = 5f;
 
     private double ShownAmount = 0f;
     private double TotalAmount = 0f;
@@ -122,20 +122,18 @@ public class EndGameScreen : MonoBehaviour
         EndGameScreenCoroutine = null;
     }
 
-
-    WaitForSeconds delay = new WaitForSeconds(0.05f);
     private IEnumerator Coroutine_AddGigEntry(string name, string amount)
     {
         for(int i = 0; i < name.Length; i++)
         {
-            yield return delay;
+            yield return null;
 
             JobEntryText.EntryName.text += name[i];
         }
 
         for (int i = 0; i < amount.Length; i++)
         {
-            yield return delay;
+            yield return null;
 
             JobEntryText.EntryAmount.text += amount[i];
         }
@@ -148,14 +146,14 @@ public class EndGameScreen : MonoBehaviour
 
         for (int i = 0; i < transactionName.Length; i++)
         {
-            yield return delay;
+            yield return null;
 
             entry.EntryName.text += transactionName[i];
         }
 
         for (int i = 0; i < amount.Length; i++)
         {
-            yield return delay;
+            yield return null;
 
             entry.EntryAmount.text += amount[i];
         }

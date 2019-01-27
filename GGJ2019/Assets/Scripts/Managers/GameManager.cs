@@ -5,14 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private float m_SecondsUntilGameStart = 5f;
+    private float m_SecondsUntilGameStart = 25f;
 
     #region Singlton
     private static GameManager s_instance = null;
     public static GameManager Instance { get { return s_instance; } }
     #endregion
     
-    private float m_TimeRemaining = 5f; // In Seconds
+    private float m_TimeRemaining = 180f; // In Seconds
 
     private List<Transaction> m_Reciept;
 
@@ -50,8 +50,7 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        Debug.Log("Game Ended!");
-        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh #"); // TODO: Pass in receipt transactions
+        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh+");
     }
 
     private void ShowTransactionUI(Transform origin, int value)
@@ -103,7 +102,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Coroutine_Update()
     {
-        Debug.Log("Game Started!");
         while (m_TimeRemaining > 0f)
         {
             yield return null;
