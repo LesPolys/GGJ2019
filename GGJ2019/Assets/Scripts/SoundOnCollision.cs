@@ -13,8 +13,8 @@ public class SoundOnCollision : MonoBehaviour
     void Start()
     {
         sound = GetComponent<AudioSource> ();
+        sound.spatialBlend = 1f;
 
-        
     }
 
     // Update is called once per frame

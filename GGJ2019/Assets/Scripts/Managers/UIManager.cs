@@ -15,10 +15,18 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private EndGameScreen EndGameScreen = null;
 
+    [SerializeField]
+    private InGameHUD InGameHUD = null;
+
 
     private void Awake()
     {
         s_instance = this;
+    }
+
+    public void UpdateTimeRemaining(double secondsRemaining, Vector4 colour)
+    {
+        InGameHUD.SetTimerText(secondsRemaining, colour);
     }
 
     public void ShowMessageOnHUD(Transform worldOrigin, string message) { }
@@ -26,5 +34,7 @@ public class UIManager : MonoBehaviour
     public void ShowEndGameScreen(ref List<Transaction> receipt, string grade)
     {
         EndGameScreen.ShowEndGameScore(ref receipt, ref grade, "Moving Trials", 1800);
+
+        InGameHUD.gameObject.SetActive(false);
     }
 }
