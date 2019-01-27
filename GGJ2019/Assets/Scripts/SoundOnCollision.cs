@@ -13,6 +13,8 @@ public class SoundOnCollision : MonoBehaviour
     void Start()
     {
         sound = GetComponent<AudioSource> ();
+
+        
     }
 
     // Update is called once per frame
