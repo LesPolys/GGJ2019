@@ -5,7 +5,7 @@ using UnityEngine;
 public class GravGunJuice : MonoBehaviour
 {
 
- 
+    [SerializeField]
     public Transform lookpoint;
    
   
