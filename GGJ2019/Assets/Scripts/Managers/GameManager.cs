@@ -15,10 +15,18 @@ public class GameManager : MonoBehaviour
     private float m_TimeRemaining = 5f; // In Seconds
 
     private List<Transaction> m_Reciept;
+
+
+
+    //[SerializeField]
+    //List<Transform> spawnPoints;
+    [SerializeField]
+    List<Furniture> houseFurniture;
     
     private void Awake()
     {
         s_instance = this;
+        m_Reciept = new List<Transaction>();
     }
 
     private IEnumerator Start()
@@ -31,7 +39,6 @@ public class GameManager : MonoBehaviour
         StartGame();
     }
 
-    #region Private
 
     public void StartGame()
     {
@@ -41,7 +48,7 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         Debug.Log("Game Ended!");
-        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh #"); // TODO: Pass in receipt transactions
+        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh+");
     }
 
     private void ShowTransactionUI(Transform origin, int value)
@@ -56,30 +63,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    #endregion
 
     #region Public
 
-    public void AddToReceipt(RequestCostAdjustmentDelegate callback, Transform origin, string Name, int value)
+    public void AddToReceipt(Transform origin, string name, float value)
     {
-        for (int i = 0; i < m_Reciept.Count; i++)
-        {
-            Transaction transaction = m_Reciept[i];
-
-            if (transaction.Callback == callback)
-            {
-                transaction.Origin = origin;
-
-                ShowTransactionUI(origin, transaction.Value - value);
-                transaction.Value = value;
-                transaction.Name = name;
-
-                return;
-            }
-        }
-
-        m_Reciept.Add(new Transaction() { Value = value, Name = name, Callback = callback, Origin = origin });
-        ShowTransactionUI(origin, value);
+        m_Reciept.Add(new Transaction() { Value = (int)value, Name = name, Origin = origin });
+        ShowTransactionUI(origin, (int)value);
     }
 
     public void RemoveFromReceipt(RequestCostAdjustmentDelegate callback)
@@ -92,6 +82,14 @@ public class GameManager : MonoBehaviour
                 m_Reciept.Remove(transaction);
                 ShowTransactionUI(transaction.Origin, transaction.Value);
             }
+        }
+    }
+
+    public void AddAllItemsToReceipt()
+    {
+        foreach(Furniture piece in houseFurniture)
+        {
+            AddToReceipt(piece.gameObject.transform, piece.furnitureName, piece.finalScore);
         }
     }
 
@@ -108,6 +106,7 @@ public class GameManager : MonoBehaviour
             yield return null;
             m_TimeRemaining -= Time.deltaTime;
         }
+        AddAllItemsToReceipt();
         EndGame();
     }
 

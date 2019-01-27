@@ -26,6 +26,8 @@ public class GravGun : MonoBehaviour
     /// <summary>The rigidbody we are currently holding</summary>
     public Rigidbody HoldingObject { get; private set; }
 
+    CameraShakeInstance shakeInstance;
+
     #region Held Object Info
     /// <summary>The offset vector from the object's position to hit point, in local space</summary>
     private Vector3 hitOffsetLocal;
@@ -72,6 +74,7 @@ public class GravGun : MonoBehaviour
                 HoldingObject.interpolation = initialInterpolationSetting;
                 chargeValue = 0.0f;
                 chargeSlider.value = chargeValue;
+                
                 HoldingObject = null;
             }
 
@@ -138,6 +141,11 @@ public class GravGun : MonoBehaviour
 
                 if (Input.GetMouseButton(0))
                 {
+                    if(shakeInstance == null)
+                    {
+                        shakeInstance = CameraShaker.Instance.StartShake(1f, 1f, 0.01f);
+                    }
+
 
                     if (chargeValue < 1)
                     {
@@ -198,7 +206,10 @@ public class GravGun : MonoBehaviour
 
         HoldingObject.AddForce((HoldingObject.transform.position - transform.position) * shootForce * ShotCharge, ForceMode.Force);
         HoldingObject.interpolation = initialInterpolationSetting;
-
+        if (shakeInstance != null) {
+            shakeInstance.StartFadeOut(0.1f);
+            shakeInstance = null;
+        }
 
         CameraShaker.Instance.ShakeOnce(chargeValue, 15f, 0.1f, 1f);
 

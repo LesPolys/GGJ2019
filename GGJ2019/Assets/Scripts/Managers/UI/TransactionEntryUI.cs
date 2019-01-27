@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class TransactionEntryUI : MonoBehaviour
 {
-    [SerializeField]
-    private Text EntryName;
-
-    [SerializeField]
-    private Text EntryAmount;
+    public Text EntryName;
+    public Text EntryAmount;
 
     public void InitTransactionEntry(string name, string amount)
     {
