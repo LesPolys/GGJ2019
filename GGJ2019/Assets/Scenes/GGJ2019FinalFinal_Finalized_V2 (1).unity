@@ -220,8 +220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -353,8 +353,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -547,11 +547,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bed
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!65 &114325000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -771,8 +771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -1130,11 +1130,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bed
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!65 &244009536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1268,11 +1268,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Sofa
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &282183422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1410,11 +1410,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &298796760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1526,8 +1526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Toilet
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -1728,8 +1728,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Display Case
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -1888,8 +1888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -2001,8 +2001,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -2121,11 +2121,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bath
+  maxScoreVal: 20
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!65 &399044915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2285,11 +2285,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Washing Machine
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!1001 &465172421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2381,11 +2381,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Sofa
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &465172425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2622,11 +2622,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &489160240
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2751,8 +2751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -2855,8 +2855,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3001,8 +3001,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3091,8 +3091,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Display Case
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3245,8 +3245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: TV
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3366,11 +3366,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Dryer
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!65 &552612335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3485,8 +3485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Display Case
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3635,8 +3635,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3766,8 +3766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3895,8 +3895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -3993,8 +3993,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -4143,8 +4143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -4247,8 +4247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -4543,8 +4543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -4672,8 +4672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -4788,8 +4788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -4983,8 +4983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -5125,8 +5125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -5258,8 +5258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -5375,8 +5375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -5471,8 +5471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Toilet
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -5619,11 +5619,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Table
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!4 &924335726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2020311290, guid: df6b42bafdf27b64c8b1809d30b9d963,
@@ -5738,8 +5738,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -5970,8 +5970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -6099,8 +6099,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -6249,11 +6249,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bed
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!65 &1166881083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6391,8 +6391,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -6526,8 +6526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -6670,8 +6670,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -6801,8 +6801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -7265,11 +7265,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &1307301475
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7375,8 +7375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -7500,8 +7500,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -7652,8 +7652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -7752,8 +7752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -7896,8 +7896,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Lamp
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -7972,11 +7972,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Fridge
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!1001 &1425379584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8196,8 +8196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Coffee Table
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -8338,11 +8338,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &1510528296
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8464,11 +8464,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bath
+  maxScoreVal: 20
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!65 &1603733342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8583,8 +8583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Display Case
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -8718,8 +8718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -8982,11 +8982,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Sofa
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &1743876037
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9093,8 +9093,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Display Case
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -9241,8 +9241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -9357,8 +9357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -9494,11 +9494,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: TV Stand
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
-  rotScoreMultiplier: 0
+  rotScoreMultiplier: 2.5
 --- !u!54 &1806072243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9623,8 +9623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: End Table
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -9752,8 +9752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -10070,8 +10070,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -10152,8 +10152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Chair
+  maxScoreVal: 5
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -10300,8 +10300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -10406,8 +10406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Display Case
+  maxScoreVal: 25
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -10606,8 +10606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Table
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -10817,8 +10817,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Bookshelf
+  maxScoreVal: 15
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
@@ -11046,8 +11046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   finalRotation: {x: 0, y: 0, z: 0, w: 0}
-  furnitureName: 
-  maxScoreVal: 0
+  furnitureName: Cupboards
+  maxScoreVal: 10
   scoreCheckCountDown: 2
   minDistCutoff: 0.01
   rotScoreMultiplier: 0
