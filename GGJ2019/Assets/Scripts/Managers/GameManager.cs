@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
             m_SecondsUntilGameStart -= Time.deltaTime;
+
+            UIManager.Instance.UpdateTimeRemaining(m_SecondsUntilGameStart, Color.red);
         }
         StartGame();
     }
@@ -105,6 +107,12 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
             m_TimeRemaining -= Time.deltaTime;
+            if(m_TimeRemaining < 0f)
+            {
+                m_TimeRemaining = 0f;
+            }
+
+            UIManager.Instance.UpdateTimeRemaining(m_TimeRemaining, Color.yellow);
         }
         AddAllItemsToReceipt();
         EndGame();
