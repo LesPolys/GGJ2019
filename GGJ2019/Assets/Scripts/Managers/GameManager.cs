@@ -12,10 +12,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return s_instance; } }
     #endregion
     
-    private float m_TimeRemaining = 120f; // In Seconds
-    private UIManager m_UIManager = null;
+    private float m_TimeRemaining = 5f; // In Seconds
 
-    public delegate float RequestCostAdjustmentDelegate();
     private List<Transaction> m_Reciept;
     
     private void Awake()
@@ -42,7 +40,8 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        m_UIManager.ShowEndGameScreen(); // TODO: Pass in receipt transactions
+        Debug.Log("Game Ended!");
+        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh #"); // TODO: Pass in receipt transactions
     }
 
     private void ShowTransactionUI(Transform origin, int value)
@@ -61,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     #region Public
 
-    public void AddToReceipt(RequestCostAdjustmentDelegate callback, Transform origin, int value)
+    public void AddToReceipt(RequestCostAdjustmentDelegate callback, Transform origin, string Name, int value)
     {
         for (int i = 0; i < m_Reciept.Count; i++)
         {
@@ -73,12 +72,13 @@ public class GameManager : MonoBehaviour
 
                 ShowTransactionUI(origin, transaction.Value - value);
                 transaction.Value = value;
+                transaction.Name = name;
 
                 return;
             }
         }
 
-        m_Reciept.Add(new Transaction() { Value = value, Callback = callback, Origin = origin });
+        m_Reciept.Add(new Transaction() { Value = value, Name = name, Callback = callback, Origin = origin });
         ShowTransactionUI(origin, value);
     }
 
@@ -102,6 +102,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Coroutine_Update()
     {
+        Debug.Log("Game Started!");
         while (m_TimeRemaining > 0f)
         {
             yield return null;
@@ -112,10 +113,13 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    private struct Transaction
-    {
-        public int Value;
-        public Transform Origin;
-        public RequestCostAdjustmentDelegate Callback;
-    };
+}
+
+public delegate float RequestCostAdjustmentDelegate();
+public struct Transaction
+{
+    public int Value;
+    public string Name;
+    public Transform Origin;
+    public RequestCostAdjustmentDelegate Callback;
 }
