@@ -8,6 +8,9 @@ public class EndGameScreen : MonoBehaviour
     #region Serialized
 
     [SerializeField]
+    private float ValueIncrementRate = 5.53f;
+
+    [SerializeField]
     private Transform RankText = null;
 
     [SerializeField]
@@ -23,68 +26,150 @@ public class EndGameScreen : MonoBehaviour
     private Text TotalAmountText = null;
 
     [SerializeField]
+    private TransactionEntryUI JobEntryText = null;
+
+    [SerializeField]
+    private Transform TransactionsRoot = null;
+
+    [SerializeField]
     private TransactionEntryUI TansactionEntryPrefab = null;
+
+    [SerializeField]
+    private AnimationCurve PopEffect;
     
     #endregion
 
     private bool UpdateTotalAmount = false;
-    private float ValueIncrementMultiplier = 5f;
+    private float ValueIncrementMultiplier = 15f;
 
-    private float ShownAmount = 0f;
-    private float TotalAmount = 0f;
+    private double ShownAmount = 0f;
+    private double TotalAmount = 0f;
     private Coroutine EndGameScreenCoroutine = null;
 
     private List<Transaction> m_Receipt;
     private string m_Grade;
+    private string m_GigName;
+    private double m_GigReward;
 
     private void Awake()
     {
         if (EndGameScreenCoroutine == null)
         {
-            EndGameScreenCoroutine = StartCoroutine(Coroutine_ShowEndGameScore(m_Receipt, m_Grade));
+            EndGameScreenCoroutine = StartCoroutine(Coroutine_ShowEndGameScore());
         }
     }
 
     #region Public
 
-    public void ShowEndGameScore(ref List<Transaction> receipt, ref string grade)
+    public void ShowEndGameScore(ref List<Transaction> receipt, ref string grade, string gigName, double gigReward)
     {
         gameObject.SetActive(true);
         m_Receipt = receipt;
         m_Grade = grade;
+        m_GigName = gigName;
+        m_GigReward = gigReward;
     }
 
     #endregion
 
     #region Coroutines
 
-    private IEnumerator Coroutine_ShowEndGameScore(List<Transaction> receipt, string grade)
+    private IEnumerator Coroutine_ShowEndGameScore()
     {
-        yield return StartCoroutine(Coroutine_PopIn(ReceiptRoot));
+        yield return (Coroutine_PopIn(ReceiptRoot));
 
         StartCoroutine(Coroutine_UpdateTotalAmount());
-        yield return StartCoroutine(Coroutine_AddGigEntry("Moving Trials", "$1800"));
-        TotalAmount += 1800;
-        
-        foreach(Transaction transaction in receipt)
-        {
-            yield return StartCoroutine(Coroutine_AddReceiptEntry(transaction.Name, transaction.Value.ToString()));
-            TotalAmount += transaction.Value;
-        }
+        yield return (Coroutine_AddGigEntry(m_GigName.ToString(), m_GigReward.ToString()));
+        TotalAmount += m_GigReward;
 
+        if (m_Receipt != null)
+        {
+            foreach (Transaction transaction in m_Receipt)
+            {
+                yield return (Coroutine_AddReceiptEntry(transaction.Name, transaction.Value.ToString()));
+                TotalAmount += transaction.Value;
+            }
+        }
         StartCoroutine(Coroutine_PopIn(RestartButton));
         StartCoroutine(Coroutine_PopIn(QuitButton));
+
+        StartCoroutine(Coroutine_PopIn(RankText));
 
         EndGameScreenCoroutine = null;
     }
 
-    private IEnumerator Coroutine_AddGigEntry(string name, string amount) { yield return null; }
 
-    private IEnumerator Coroutine_AddReceiptEntry(string transactionName, string amount) { yield return null; }
+    WaitForSeconds delay = new WaitForSeconds(0.05f);
+    private IEnumerator Coroutine_AddGigEntry(string name, string amount)
+    {
+        for(int i = 0; i < name.Length; i++)
+        {
+            yield return delay;
 
-    private IEnumerator Coroutine_PopIn(Transform item) { yield return null; }
+            JobEntryText.EntryName.text += name[i];
+        }
 
-    private IEnumerator Coroutine_PopOut(Transform item) { yield return null; }
+        for (int i = 0; i < amount.Length; i++)
+        {
+            yield return delay;
+
+            JobEntryText.EntryAmount.text += amount[i];
+        }
+    }
+
+    private IEnumerator Coroutine_AddReceiptEntry(string transactionName, string amount)
+    {
+        TransactionEntryUI entry = GameObject.Instantiate(TansactionEntryPrefab.gameObject, Vector3.zero, Quaternion.identity, TransactionsRoot).GetComponent<TransactionEntryUI>();
+        entry.gameObject.SetActive(true);
+
+        for (int i = 0; i < transactionName.Length; i++)
+        {
+            yield return delay;
+
+            entry.EntryName.text += transactionName[i];
+        }
+
+        for (int i = 0; i < amount.Length; i++)
+        {
+            yield return delay;
+
+            entry.EntryAmount.text += amount[i];
+        }
+    }
+
+    private IEnumerator Coroutine_PopIn(Transform item)
+    {
+        item.gameObject.SetActive(true);
+        item.transform.localScale = Vector3.zero;
+        yield return null;
+
+        float dt = 0f;
+        while(dt < 1)
+        {
+            item.transform.localScale = Vector3.one * PopEffect.Evaluate(dt);
+            dt += Time.deltaTime * 2f;
+
+            yield return null;
+        }
+        item.transform.localScale = Vector3.one;
+    }
+
+    private IEnumerator Coroutine_PopOut(Transform item)
+    {
+        item.gameObject.SetActive(true);
+        item.transform.localScale = Vector3.zero;
+        yield return null;
+
+        float dt = 1f;
+        while (dt > 0)
+        {
+            item.transform.localScale = Vector3.one * PopEffect.Evaluate(dt);
+            dt -= Time.deltaTime * 2f;
+
+            yield return null;
+        }
+        item.transform.localScale = Vector3.one;
+    }
 
     
 
@@ -97,13 +182,14 @@ public class EndGameScreen : MonoBehaviour
 
             if (ShownAmount < TotalAmount)
             {
-                ShownAmount += 5.53f * Time.deltaTime * ValueIncrementMultiplier;
+                ShownAmount += ValueIncrementRate * Time.deltaTime * ValueIncrementMultiplier;
+                ShownAmount = System.Math.Round(ShownAmount, 2);
             }
             if(ShownAmount > TotalAmount)
             {
                 ShownAmount = TotalAmount;
             }
-            TotalAmountText.text = ShownAmount.ToString();
+            TotalAmountText.text = "$" + ShownAmount.ToString();
         }
     }
 
