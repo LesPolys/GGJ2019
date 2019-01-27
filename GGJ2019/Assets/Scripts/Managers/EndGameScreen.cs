@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndGameScreen : MonoBehaviour
@@ -57,6 +58,22 @@ public class EndGameScreen : MonoBehaviour
         {
             EndGameScreenCoroutine = StartCoroutine(Coroutine_ShowEndGameScore());
         }
+
+        QuitButton.GetComponent<Button>().onClick.AddListener(OnQuitPressed);
+        RestartButton.GetComponent<Button>().onClick.AddListener(OnRestartPressed);
+
+        Cursor.visible = true;
+    }
+
+    private void OnQuitPressed()
+    {
+        Application.Quit();
+    }
+
+    private void OnRestartPressed()
+    {
+        Cursor.visible = false;
+        SceneManager.LoadSceneAsync(0);
     }
 
     #region Public
@@ -65,9 +82,10 @@ public class EndGameScreen : MonoBehaviour
     {
         gameObject.SetActive(true);
         m_Receipt = receipt;
-        m_Grade = grade;
+        RankText.GetComponent<Text>().text = grade;
         m_GigName = gigName;
         m_GigReward = gigReward;
+
     }
 
     #endregion

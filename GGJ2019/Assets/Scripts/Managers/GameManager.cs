@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         Debug.Log("Game Ended!");
-        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh #"); // TODO: Pass in receipt transactions
+        UIManager.Instance.ShowEndGameScreen(ref m_Reciept, "Eh+");
     }
 
     private void ShowTransactionUI(Transform origin, int value)

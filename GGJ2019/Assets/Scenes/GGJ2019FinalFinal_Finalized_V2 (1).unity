@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndGameScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 2574288291217297149, guid: 3f56b6df404d0434bb8ba738fc87c524,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2574288291217297144, guid: 3f56b6df404d0434bb8ba738fc87c524,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -228,6 +233,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574288291038786215, guid: 3f56b6df404d0434bb8ba738fc87c524,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f69638037ead2c847a10cebfc191a07a,
+        type: 3}
+    - target: {fileID: 2574288291563884441, guid: 3f56b6df404d0434bb8ba738fc87c524,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574288291563884441, guid: 3f56b6df404d0434bb8ba738fc87c524,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -281.09982
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f56b6df404d0434bb8ba738fc87c524, type: 3}
@@ -422,6 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SecondsUntilGameStart: 5
+  houseFurniture: []
 --- !u!4 &2076214272
 Transform:
   m_ObjectHideFlags: 0
