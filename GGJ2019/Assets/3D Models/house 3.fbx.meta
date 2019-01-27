@@ -40,6 +40,11 @@ ModelImporter:
     4300004: roof
     4300006: Cube
     4300008: Cube.001
+    6400000: counters
+    6400002: Cube
+    6400004: Cube.001
+    6400006: house
+    6400008: roof
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -113,7 +118,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.25
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
