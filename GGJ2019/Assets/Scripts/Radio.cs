@@ -5,7 +5,7 @@ using UnityEngine;
 public class Radio : MonoBehaviour
 {
     public AudioClip[] audioClips;
-    AudioSource radioAudioSource;
+    public AudioSource radioAudioSource;
 
 
     private float songStartTime;
@@ -19,9 +19,11 @@ public class Radio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        radioAudioSource = GetComponent<AudioSource>();
+
 
         radioAudioSource.spatialBlend = 1f;
-        radioAudioSource = GetComponent<AudioSource>();
+        
 
         playSong(currentClip);
         
@@ -59,10 +61,22 @@ public class Radio : MonoBehaviour
         if (Time.time >= songStartTime + songLength +  delayBetweenSongs)
         {
 
-            currentClip += 1;
+
+            if (currentClip >= audioClips.Length)
+            {
+                currentClip = 0;
+                Debug.Log("CurrentClipReset");
+                
+            }
+            else
+            {
+                currentClip += 1;
+                
+               
+            }
+
             playSong(currentClip);
-            //change clip
-            //play song
+
         }
 
     }
