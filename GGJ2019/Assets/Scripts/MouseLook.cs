@@ -28,11 +28,11 @@ public class MouseLook
 
         public void LookRotation(Transform character, Transform camera, bool lockRot = false)
         {
-            float xRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity : 0f;
-            float yRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity : 0f;
+            float yRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity : 0f;
+            float xRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity : 0f;
 
-            m_CharacterTargetRot *= Quaternion.Euler (0f, xRot, 0f);
-            m_CameraTargetRot *= Quaternion.Euler (-yRot, 0f, 0f);
+            m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f);
+            m_CameraTargetRot *= Quaternion.Euler (-xRot, 0f, 0f);
 
             if(clampVerticalRotation)
                 m_CameraTargetRot = ClampRotationAroundXAxis (m_CameraTargetRot);
