@@ -23,16 +23,20 @@ public class MouseLook
         {
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
+            // these are Quaternions
+
+            
+
         }
 
 
         public void LookRotation(Transform character, Transform camera, bool lockRot = false)
         {
-            float yRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity : 0f;
-            float xRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity : 0f;
+            float xRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity : 0f;
+            float yRot = !lockRot ? CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity : 0f;
 
-            m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f);
-            m_CameraTargetRot *= Quaternion.Euler (-xRot, 0f, 0f);
+            m_CharacterTargetRot *= Quaternion.Euler (0f, xRot, 0f);
+            m_CameraTargetRot *= Quaternion.Euler (-yRot, 0f, 0f);
 
             if(clampVerticalRotation)
                 m_CameraTargetRot = ClampRotationAroundXAxis (m_CameraTargetRot);
@@ -46,20 +50,33 @@ public class MouseLook
             }
             else
             {
+
+            //Debug.Log("camera.localRotation BEFORE " + camera.localRotation);
                 character.localRotation = m_CharacterTargetRot;
                 camera.localRotation = m_CameraTargetRot;
-            }
+                //camera.rotation = m_CameraTargetRot; // this didn't work
+
+            // using the Before and After debug Logs I found out that something else is resetting the Camera Rotation
+            // I toggled the Camera Shaker and the Vertical started working
+
+
+            //Debug.Log("camera.localRotation AFTER " + camera.localRotation);
+
+
+        }
 
             UpdateCursorLock();
         }
 
         public void SetCursorLock(bool value)
         {
+
+            Cursor.visible = true;
             lockCursor = value;
             if(!lockCursor)
             {//we force unlock the cursor if the user disable the cursor locking helper
                 Cursor.lockState = CursorLockMode.None;
-                //Cursor.visible = true;
+                Cursor.visible = true;
             }
         }
 

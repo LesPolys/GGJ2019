@@ -8716,6 +8716,11 @@ PrefabInstance:
       propertyPath: movementSettings.JumpForce
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4044598672101842895, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: mouseLook.YSensitivity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4044598673503665237, guid: 628e54752b1322d4da67e86ee25445c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8730,6 +8735,36 @@ PrefabInstance:
         type: 3}
       propertyPath: maxGrabDistance
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044598671802373925, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044598671802373925, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044598671802373925, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044598671802373925, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044598671802373925, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044598671802373927, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4044598671974982331, guid: 628e54752b1322d4da67e86ee25445c7, type: 3}

@@ -233,7 +233,10 @@ public class RigidbodyFirstPersonController : MonoBehaviour
             // get the rotation before it's changed
             float oldYRotation = transform.eulerAngles.y;
 
+            // gravity gun.IsRotating is talking about rotating the held object
             mouseLook.LookRotation(transform, cam.transform, m_GravityGunRef.IsRotating);
+
+
             if (m_IsGrounded || advancedSettings.airControl)
             {
                 // Rotate the rigidbody velocity to match the new direction that the character is looking
