@@ -18,6 +18,7 @@ public class GravGun : MonoBehaviour
 
     public float SlerpSpeed;
 
+    public bool gravityOnDrop = true;
     public bool ChargeBeforeShot = true;
     public float instaShotChargeValue = 1;
 
@@ -74,7 +75,7 @@ public class GravGun : MonoBehaviour
                 HoldingObject.interpolation = initialInterpolationSetting;
                 chargeValue = 0.0f;
                 chargeSlider.value = chargeValue;
-                HoldingObject.useGravity = true;
+                HoldingObject.useGravity = gravityOnDrop;
                 HoldingObject = null;
             }
 
@@ -180,7 +181,7 @@ public class GravGun : MonoBehaviour
                 float newGrabDistance = currentGrabDistance + ScrollWheelSpeed;
                 if (newGrabDistance > maxDistance)
                 {
-                    newGrabDistance = currentGrabDistance;
+                    newGrabDistance = maxDistance;
                 }
                 currentGrabDistance = newGrabDistance;
             }
@@ -190,7 +191,7 @@ public class GravGun : MonoBehaviour
                 float newGrabDistance = currentGrabDistance - ScrollWheelSpeed;
                 if (newGrabDistance < minDistance)
                 {
-                    newGrabDistance = currentGrabDistance;
+                    newGrabDistance = minDistance;
                 }
                 currentGrabDistance = newGrabDistance;
 

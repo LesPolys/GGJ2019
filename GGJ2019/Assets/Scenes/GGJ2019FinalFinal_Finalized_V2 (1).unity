@@ -8736,6 +8736,16 @@ PrefabInstance:
       propertyPath: maxGrabDistance
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 4044598672101842893, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: minDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044598672101842893, guid: 628e54752b1322d4da67e86ee25445c7,
+        type: 3}
+      propertyPath: gravityOnDrop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4044598671802373925, guid: 628e54752b1322d4da67e86ee25445c7,
         type: 3}
       propertyPath: m_LocalRotation.x
